@@ -21,7 +21,7 @@
 
         <div class="col text-end">
           <% if @current_user %>
-            <%= @current_user["username"] %>
+            Logged in as: <%= @current_user["username"] %>
             <a href="/logout">Logout</a>
           
           <% else %>
