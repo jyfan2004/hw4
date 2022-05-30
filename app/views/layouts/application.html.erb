@@ -15,11 +15,11 @@
         
         <!--  <%= flash["notice"] %> -->
 
-        <div class="col-sm-4">
+        <div class="col text-start">
           <a href="/">Home</a>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col text-end">
           <% if @current_user %>
             <%= @current_user["username"] %>
             <a href="/logout">Logout</a>
@@ -32,10 +32,11 @@
           <% end %>
         </div>
       </div>
+      <%= yield %>
     </div>
-    <%= yield %>
+   
 
-  <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js> </script
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js> </script>
   </body>
 </html>
 
