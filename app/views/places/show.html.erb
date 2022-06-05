@@ -11,8 +11,20 @@
       <div class="col-md-4 mt-4">
         <h3><%= post["title"] %></h3>
         <p><%= post["posted_on"] %></p>
+      
+          <% if post.uploaded_image.attached? %>
+            <p> <img src="<%= url_for(post.uploaded_image) %>" class="img-fluid"> </p>
+          <% else %>
+
+          <% end %>
+
+      
         <p><%= post["description"] %></p>
       </div>
+
+      
+
+
     <% end %>
   </div>
 
